@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuestBook</title>
+</head>
+<body>
+    <h1>GuestBook</h1>
+    <form action="/addguest" method="post">
+        Enter guest name:
+        <input type="text" name="guestName" id=""><br>
+        Enter message for guest:
+        <input type="text" name="guestMsg" id=""><br>
+        <button type="submit">Enter</button>
+    </form>
+
+    <div class="guests">
+        
+            <% guests.forEach(function(guest) { %>
+                <div class="guest-entry">
+                    <h3>Name: <%= guest.guestName %></h3>
+                    <p>Message: <%= guest.guestMsg %></p>
+                </div>
+            <% }); %>
+      
+            
+    </div>
+</body>
+</html>
